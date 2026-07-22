@@ -44,7 +44,7 @@ select
 		else 'Standard'
 	end as customer_label
 from cte_ntile
-order by total_score desc;
+order by total_score desc, revenue desc;
 
 
 
