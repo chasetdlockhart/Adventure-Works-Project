@@ -46,8 +46,6 @@ from cte_new_retained_reactivated_churned
 group by order_quarter
 order by order_quarter;
 
--- ONLINE VS. OFFLINE ORDERS
-
 select
 	date_trunc('quarter', orderdate)::date as order_quarter,
 	count(*) filter (where onlineorderflag = true) as online_orders,
@@ -55,5 +53,3 @@ select
 from sales.salesorderheader
 group by date_trunc('quarter', orderdate)::date
 order by date_trunc('quarter', orderdate)::date;
-
-	

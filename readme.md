@@ -2,14 +2,13 @@
 
 ## Overview
 This project analyzes customer behavior and sales performance using Microsoft's
-AdventureWorks sales database, covering customer cohort retention, churn,
-quarter-over-quarter revenue growth, the split between online and offline sales
-channels, and RFM-based customer segmentation. 
+AdventureWorks sales database, covering quarter-over-quarter revenue growth, customer churn,  RFM-based customer segmentation, and customer cohort retention. 
 ## Project Structure
-- `Initial Queries` — SQL queries run against the AdventureWorks database
-- `Raw csvs` — unprocessed query exports
-- `Data Cleaning` — pandas notebooks that clean and reshape the raw exports for Tableau
-- `Clean csvs` — final, cleaned output ready for Tableau
+- `Initial Queries` - SQL queries run against the AdventureWorks database
+- `Raw csvs` - unprocessed query exports
+- `Data Cleaning` - pandas notebooks that clean and reshape the raw exports for Tableau
+- `Clean csvs` - final, cleaned output ready for Tableau
+- `Follow-up Queries` - SQL queries to answer follow-up questions
 ## Pipeline / Process
 I queried the database in DBeaver, and exported those results as CSVs. Rather than taking the raw exports straight to Tableau, I cleaned and reformatted them using pandas in VSCode. I changed data types, reshaped some CSVs to long format, and created `is_measurable` columns so I could flag values that weren't measurable and filter them out when making dashboards. These changes are meant to make working with the CSVs in Tableau easier. After that I exported the clean CSVs which were now ready for Tableau.
 ## Design Approach
