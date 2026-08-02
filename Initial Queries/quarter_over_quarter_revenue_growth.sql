@@ -4,7 +4,7 @@
 with cte_quarterly_revenue as(
 	select
 		date_trunc('quarter', soh.orderdate)::date as order_quarter,
-				sum(sod.unitprice * sod.orderqty * (1 - sod.unitpricediscount)) as revenue
+		sum(sod.unitprice * sod.orderqty * (1 - sod.unitpricediscount)) as revenue
 	from sales.salesorderheader soh
 	join sales.salesorderdetail sod
 		on soh.salesorderid = sod.salesorderid
