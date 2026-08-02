@@ -18,5 +18,5 @@ After working with the database one of the first design decisions I made was to 
 ### Quarterly Revenue Trend
 Adventure Works quarterly revenue increased from 2.5 million dollars in early 2022 to 12.8 million at the beginning of 2025 before taking a steep decline to 7.2 million in the following quarter, a 44% decline. To further investigate the sudden decline, I compared KPIs of 2025 Q1 to 2025 Q2. I found that the 44% decrease in revenue can be attributed to a 14.2% decrease in order volume and a 14.3% decrease in customer count while average order value decreased by 34.8% and average customer revenue fell by 34.7%. In unison, these factors led to the largest quarter-over-quarter revenue drop in the data. The fact that orders per customer stayed nearly identical between quarters supports a wholesale/inventory-ordering pattern, which is also why sales line up better on a quarterly than monthly basis. Further investigation into product mix or promotional timing would help pinpoint the exact driver, though that's outside this project's customer-behavior scope.
 
-![alt text](image.png)
+![alt text](Images/quarterly_revenue_trend.png)
 
