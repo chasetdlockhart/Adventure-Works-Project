@@ -20,3 +20,10 @@ Adventure Works quarterly revenue increased from 2.5 million dollars in early 20
 
 ![alt text](Images/quarterly_revenue_trend.png)
 
+### Customer Status Trends
+In customer status trends, I classified customers based off of the previous quarter and next quarter using lag/lead. I classified customers as new if they hadn't ordered before, retained if they ordered in the previous and current quarter, and reactivated if they had ordered in the past, but hadn't ordered in the previous quarter and did order in the current quarter. In a separate classification I labeled customers as churned if they didn't order in the next quarter. I also made sure that customers in the last quarter of the data weren't mislabeled as churned when it was just the end of the data.
+
+What stands out in this line graph is the jump from 1,134 to 4,055 churned customers and 1,006 to 3,543 new customers between the second and third quarter of 2024. To investigate further I went to the ER diagram of the AdventureWorks database and found a boolean column that flagged whether an order was made online or not. When I broke down the online and offline orders by each quarter, I found that online orders jumped from 1220 to 4882 orders between the second and third quarter of 2024. This alignment between the increase in online orders and the spike in new and churned customers suggests that some sort of push to increase online traffic resulted in about a 300% increase in online orders, 252% increase in new customers, and 258% increase in churned customers. Because churn is defined by not returning the following quarter, an increase in one-time buyers would produce this pattern of simultaneous spikes in both new and churned. That's consistent with the online order surge being the source of that burst, supporting the hypothesis of a push toward online traffic. 
+
+![alt text](Images/churn_analysis.png)
+

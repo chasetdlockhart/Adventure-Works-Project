@@ -1,5 +1,5 @@
 -- ONLINE VS. OFFLINE ORDERS
--- Follow-up to churn_analysis.sql — quarterly order counts by channel.
+-- Follow-up to churn_analysis.sql: quarterly order counts by channel.
 
 select
 	date_trunc('quarter', orderdate)::date as order_quarter,
