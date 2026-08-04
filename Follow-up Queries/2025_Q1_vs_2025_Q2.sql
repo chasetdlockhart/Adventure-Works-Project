@@ -1,3 +1,6 @@
+-- QUARTER COMPARISON
+-- Follow-up to quarterly revenue trend: compares 2025 Q1 to 2025 Q2
+
 with cte_order_quarters as(
 	select
 		date_trunc('quarter', soh.orderdate)::date as order_quarter,
